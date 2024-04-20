@@ -45,6 +45,21 @@ body {
     --ring: 214.12 100% 50%;
 
     --radius: 0.5rem;
+
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2, 12, 27, 0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100, 255, 218, 0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
   }
 
   .dark {
@@ -91,10 +106,33 @@ body {
   0% {
     opacity: 0;
     transform: scale(0.95);
+    
   }
 
   100% {
     opacity: 1;
     transform: scale(1);
   }
+}
+
+// Add a blur effect to the body when the modal is open
+ {
+  /* filter: blur(8px);
+  transition: filter 0.3s ease; Optional for smooth transitions */
+
+  
+}
+
+.effect-blur {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
+
+.logo-light {
+    width: 20%;
+    padding-block: 10px;
+}
+
+.text-navy {
+  color: #222;
 }
