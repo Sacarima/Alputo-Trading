@@ -11,7 +11,7 @@ export default function Home({ setSelectedPage}) {
     <div >
       
         <section 
-          id='home'
+          
           className='md:flex md:justify-between md:items-center md:h-fully gap-24 py-10'  
         >
             {/* IMAGE SECTION */}

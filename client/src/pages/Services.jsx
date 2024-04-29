@@ -1,7 +1,12 @@
+import ServiceCard from "../components/ServiceCard"
+  
+const Service = ({text}) => {
 
-const Service = () => {
+
   return (
-    <section className="pb-12 pt-20 dark:bg-navy lg:pb-[90px] lg:pt-[120px]">
+    <section
+    id='services'
+      className="pb-12 pt-20 dark:bg-navy lg:pb-[90px] lg:pt-[120px]">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -12,15 +17,14 @@ const Service = () => {
               <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
                 What We Offer
               </h2>
-              <p className="text-base text-body-color dark:text-dark-6">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, quia pariatur quam voluptas commodi dignissimos illo rem consequuntur soluta quidem.
-              </p>
+              
             </div>
           </div>
         </div>
 
         <div className="-mx-4 flex flex-wrap">
             <ServiceCard
+              
               title="General trade"
               details="Our General Trade service encompasses a wide
               range of products and commodities, facilitating
@@ -28,7 +32,9 @@ const Service = () => {
               industries. With our extensive network and market
               expertise, we ensure smooth and efficient trade
               operations, delivering high-quality products to
-              meet our clients' needs."
+              meet our clients' needs.
+              "
+              paragraphClassName="pb-2"
               icon={
                 <svg
                   width="36"
@@ -54,6 +60,7 @@ const Service = () => {
               entire process with precision and reliability,
               ensuring compliance with trade regulations and
               optimizing supply chain efficiency."
+              paragraphClassName="pb-2"
               icon={
                 <svg
                   width="36"
@@ -72,6 +79,7 @@ const Service = () => {
               }
             />
             <ServiceCard
+              
               title="Transportation and logistic"
               details="Our Transportation and Logistics service offers
               comprehensive solutions for moving goods
@@ -82,6 +90,7 @@ const Service = () => {
               systems and strategic partnerships, we provide
               end-to-end logistics support tailored to our
               clients' requirements."
+              paragraphClassName="pb-2"
               icon={
                 <svg
                   width="36"
@@ -140,7 +149,7 @@ const Service = () => {
               }
             />
             <ServiceCard
-              title="Money transfer and overseas payments between Namibia and Angola"
+              title="Money transfer"
               details="Our Money Transfer and Overseas Payments
               service offers secure and efficient solutions for
               sending money and making payments between
@@ -202,21 +211,3 @@ const Service = () => {
 };
 
 export default Service;
-
-const ServiceCard = ({ icon, title, details }) => {
-  return (
-    <>
-      <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div className="mb-9 rounded-[20px] bg-[#fff] p-10 shadow-2 hover:shadow-lg dark:bg-light-navy md:px-7 xl:px-10">
-          <div className="mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl bg-primary">
-            {icon}
-          </div>
-          <h4 className="mb-[14px] text-2xl font-semibold text-dark dark:text-white">
-            {title}
-          </h4>
-          <p className="text-body-color dark:text-dark-6">{details}</p>
-        </div>
-      </div>
-    </>
-  );
-};

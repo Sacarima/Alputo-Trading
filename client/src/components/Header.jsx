@@ -13,7 +13,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
     const  lowercasedPage = page.toLowerCase()
     return (
         <AnchorLink
-            className={`${selectedPage === lowercasedPage ? "text-navy" : ""} hover:text-green text-lightest-slate transition duration-500`}
+            className={`${selectedPage === lowercasedPage ? "text-navy dark:text-[#fff]" : ""} hover:text-lightest-navy text-primary dark:text-lightest-slate transition duration-500`}
             href={`#${lowercasedPage}`}
             onClick={() => setSelectedPage(lowercasedPage)}
             
@@ -25,10 +25,11 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 
 export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
    const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
-   const navbarBackground = isTopOfPage ? "" : " bg-[#ffffffF2] transition text-light-nav duration-500 ease-in-out shadow-md"
+   const navbarBackground = isTopOfPage ? "" : " dark:bg-lightest-navy bg-white transition text-light-nav duration-500 ease-in-out shadow-md"
    const dispatch = useDispatch()
    const { theme } = useSelector(state => state.theme)
    const isMenuOpen = useSelector(state => state.ui.isMenuOpen)
+
  
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0`}>
@@ -67,13 +68,7 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
                                 setSelectedPage={setSelectedPage}
                           />
                       </div>
-                      <div className="text-navy">
-                          <Link
-                                page="Services"
-                                selectedPage={selectedPage}
-                                setSelectedPage={setSelectedPage}
-                          />
-                      </div> 
+                      
                       <div className="text-navy">
                           <Link
                                 page="About"
@@ -81,6 +76,15 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
                                 setSelectedPage={setSelectedPage}
                           />
                       </div>
+
+                      <div className="text-navy">
+                          <Link
+                                page="Services"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                          />
+                      </div> 
+                      
                        <div className="text-navy">
                            <Link
                                 page="Contact"
@@ -92,7 +96,7 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
                        {/* THEME TOGGLE */}
                     <div>
                         <button 
-                            className='w-12 h-12 hidden sm:inline text-xl dark:text-lightest-slate text-lightest-navy cursor-pointer mario' 
+                            className='w-12 h-12 hidden sm:inline text-xl dark:text-lightest-slate text-primary cursor-pointer mario' 
                             onClick={() => dispatch(toogleTheme())}
                          >
                             {theme === 'light' ? <FaSun /> : <FaMoon />}
@@ -104,13 +108,13 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
                 ) : (
                     <div className='flex gap-4 items-center  justify-between'>
                     <button 
-                            className='w-10 h-10 sm:inline mx-auto text-navy text-xl outline-none focus-visible:outline-none   ' 
+                            className='w-10 h-10 sm:inline mx-auto dark:text-lightest-slate text-primary text-xl outline-none focus-visible:outline-none   ' 
                             onClick={() => dispatch(toogleTheme())}
                          >
                             {theme === 'light' ? <FaSun /> : <FaMoon />}
                         </button>
                         <button
-                            className=" text-4xl text-navy dark:text-navy mb-2 overflow-hidden"
+                            className=" text-4xl text-primary dark:text-lightest-slate mb-2 overflow-hidden"
                             onClick={() => dispatch(toggleMenu())}
                         >
                            ☰
@@ -122,11 +126,11 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
 
                 {/* MOBILE MENU POPUP */}
                 {!isAboveSmallScreens && isMenuOpen && (
-                    <div className="fixed right-0 bottom-0 h-full bg-[#F5F5F5] w-[300px]">
+                    <div className="fixed right-0 bottom-0 h-full dark:bg-lightest-navy bg-white w-[300px]">
                         {/* CLOSE ICON */}
                         <div className="flex justify-end p-3">
                             <button 
-                                className='text-3xl text-navy cursor-pointer mario' 
+                                className='text-3xl text-navy dark:text-lightest-slate cursor-pointer mario' 
                                 onClick={() => dispatch(toggleMenu())}
                             >
                                 X

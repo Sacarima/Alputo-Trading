@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import windhoekPhoto from '../assets/windhoekChurch3.jpeg'
+import windhoekPhoto from '../assets/windhoek-city.webp'
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { motion } from 'framer-motion'
 
@@ -7,7 +7,10 @@ const Hero = () => {
   return (
     <>
       
-      <div className="relative bg-[#fff] pb-[110px] pt-[120px] dark:bg-navy lg:pt-[150px]">
+      <div 
+        id='home'
+        className="relative bg-[#fff] pb-[110px] pt-[120px] dark:bg-navy lg:pt-[150px]"
+        >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-5/12">
@@ -16,18 +19,20 @@ const Hero = () => {
                   Welcome to <br /><span className="md:text-7xl">Alputo</span> <span className="md:text-7xl text-5xl text-primary ">Trading</span>
                 </h1>
                 <p className="mb-8 max-w-[480px] text-md font-light text-base text-body-color dark:text-dark-6 leading-7">
-                We are a trading company based in Angola and Namibia, dedicated to connecting people, businesses, and markets beyond borders. ur mission is to facilitate trade
+                We are a trading company based in Angola and Namibia, dedicated to connecting people, businesses, and markets beyond borders. Our mission is to facilitate trade
 and promote economic growth by offering
 a variety of comprehensive services
                 </p>
                 <ul className="flex flex-wrap items-center">
                   <li>
-                    <a
-                      href="/#"
-                      className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
-                    >
-                      Contact Us
-                    </a>
+                    <AnchorLink>
+                      <button
+                        href="/contact"
+                        className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
+                      >
+                        Contact Us
+                      </button>
+                    </AnchorLink>
                   </li>
                   <li>
                     <a
@@ -68,7 +73,7 @@ a variety of comprehensive services
                   </li>
                 </ul>
                 
-                <div className="clients pt-16">
+                {/* <div className="clients pt-16">
                   <h6 className="mb-6 flex items-center text-xs font-normal text-body-color dark:text-dark-6">
                     Some Of Our Clients
                     <span className="ml-3 inline-block h-px w-8 bg-body-color"></span>
@@ -90,9 +95,10 @@ a variety of comprehensive services
                       imgSrc="https://cdn.tailgrids.com/2.0/image/assets/images/brands/uideck.svg"
                     />
                   </div>
-                </div>
+                    </div>*/}
               </div>
-            </div>
+            </div> 
+            
             <div className="hidden px-4 lg:block lg:w-1/12"></div>
             <div className="w-full px-4 lg:w-6/12">
               <div className="lg:ml-auto lg:text-right">

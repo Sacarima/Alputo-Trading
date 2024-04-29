@@ -9,6 +9,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import FeaturedSection from './pages/FeaturedSection';
 import Footer from './pages/Footer';
+import About from './pages/About';
 
 export default function App() {
   // Access the menu state from the Redux store
@@ -42,6 +43,7 @@ export default function App() {
       }
     };
 
+    // 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -55,11 +57,13 @@ export default function App() {
         isTopOfPage={isTopOfPage} 
         selectedPage={selectedPage} 
         setSelectedPage={setSelectedPage}
-        // isMenuOpen={isMenuOpen}
-        // position={position}
+        
         
       />
-      <div className={`${contentClass}`}>
+      <div 
+        className={`${contentClass}`}
+        selectedPage
+        >
         <HomeTwo />
       </div>
       {/* <div className={contentClass}>
@@ -70,7 +74,9 @@ export default function App() {
       <div className={contentClass}>
         <Brands />
     </div>
-    
+    <div className={contentClass}>
+        <About />
+    </div>
     <div className={contentClass}>
         <FeaturedSection />
     </div>

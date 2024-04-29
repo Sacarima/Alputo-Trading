@@ -4,7 +4,10 @@ const Brands = () => {
   return (
     <>
       {/* ====== Brands Section Start */}
-      <section className="bg-white py-20 dark:bg-dark lg:py-[120px]">
+      <section
+        id='brands'
+        className="bg-white py-20 dark:bg-dark lg:py-[120px]"
+        >
        
         <div className="container mx-auto">
           
