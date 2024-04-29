@@ -1,42 +1,23 @@
-//import { useState } from "react"
-//import { useForm } from 'react-hook-form'
-//https://script.google.com/macros/s/AKfycbxOsWAl_keMkCMaNfmJvUn0w7D6pBJJGj_-6lw3wKHqdHLOc2tRVrljau_L4HUXF2T_Uw/exec
+import { useState } from "react"
+import { useForm } from 'react-hook-form'
+
 const Contact = () => {
-  // const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
-  //   const {
-  //       register,
-  //       trigger,
-  //       reset,
-  //       formState: {errors}
-  //   } = useForm();
+    const {
+        register,
+        trigger,
+        reset,
+        formState: {errors}
+    } = useForm();
 
-  //   const onSubmit = async (data) => {
-  //       const isValid = await trigger();
-  //       if (!isValid) {
-  //           setFormSubmitted(true);
-  //           reset();
-  //       }
-  //   }
-
-  const onSubmit = (e) => {
-    const formEle = document.querySelector("form");
-    const formDatab = new FormData(formEle);
-    fetch(
-      "https://script.google.com/macros/s/AKfycbxOsWAl_keMkCMaNfmJvUn0w7D6pBJJGj_-6lw3wKHqdHLOc2tRVrljau_L4HUXF2T_Uw/exec",
-      {
-        method: "POST",
-        body: formDatab
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+    const onSubmit = async (data) => {
+        const isValid = await trigger();
+        if (!isValid) {
+            setFormSubmitted(true);
+            reset();
+        }
+    }
 
   return (
     <>
@@ -178,67 +159,66 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
-              <div className="relative rounded-lg bg-[#fff] dark:text-lightest-navy p-8 shadow-lg dark:bg-dark-2 sm:p-12">
+              <div className="relative rounded-lg bg-[#fff] p-8 shadow-lg dark:bg-dark-2 sm:p-12">
                 <form
                   target="_blank"
-                  onSubmit={(e) => onSubmit(e)}
-                  //action="https://formsubmit.co/lukids092021@gmail.com"
-                  //method="POST"
+                  onSubmit={onSubmit}
+                  action="https://formsubmit.co/lukids092021@gmail.com"
+                  method="POST"
                 >
                   <ContactInputBox
                     type="text"
                     placeholder="name"
-                    name="Name"
-                    // {...register("Name", {
-                    //   required: true,
-                    //   maxLength: 100,
-                    // })}
+                    {...register("name", {
+                      required: true,
+                      maxLength: 100,
+                    })}
                   />
-                  {/* {errors.name && (
+                  {errors.name && (
                     <p className="text-red mt-1">
                       {errors.name.type === "required" && "This field is required."}
                       {errors.name.type === "maxLength" && "Max length is 100 char."}
                     </p>
-                  )} */}
+                  )}
                   <ContactInputBox
                     type="text"
-                    name="Email"
+                    name="email"
                     placeholder="Your Email"
-                    // {...register("email", {
-                    //   required: true,
-                    //   pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                    // })}
+                    {...register("email", {
+                      required: true,
+                      pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    })}
                   />
-                  {/* {errors.email && (
+                  {errors.email && (
                     <p className="text-red mt-1">
                       {errors.email.type === "required" && "This field is required."}
                       {errors.email.type === "pattern" && "Invalid email address."}
                     </p>
-                  )} */}
+                  )}
 
                   <ContactInputBox
                     type="text"
-                    name="PhoneNumber"
+                    name="phone"
                     placeholder="Your Phone"
                   />
                   <ContactTextArea
                     row="6"
                     placeholder="Your Message"
-                    name="Message"
+                    name="details"
                     defaultValue=""
-                    // {...register("message", {
-                    //   required: true,
-                    //   maxLength: 2000,
-                    // })}
+                    {...register("message", {
+                      required: true,
+                      maxLength: 2000,
+                    })}
                   />
-                  {/* {errors.message && (
+                  {errors.message && (
                     <p className="text-red mt-1">
                       {errors.message.type === "required" &&
                         "This field is required."}
                       {errors.message.type === "maxLength" &&
                         "Max length is 2000 char."}
                     </p>
-                  )} */}
+                  )}
                   <div>
                     <button
                       type="submit"
