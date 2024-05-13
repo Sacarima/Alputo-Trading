@@ -4,7 +4,6 @@ import useMediaQuery from './hooks/useMediaQuery';
 import Header from './components/Header';
 import HomeTwo from './pages/HomeTwo'
 import Brands from './pages/Brands';
-import Home from './pages/Home';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import FeaturedSection from './pages/FeaturedSection';
@@ -66,11 +65,7 @@ export default function App() {
         >
         <HomeTwo />
       </div>
-      {/* <div className={contentClass}>
-        <div className={`w-5/6 mx-auto md:h-full`}>
-          <Home />
-        </div>
-      </div> */}
+      
       <div className={contentClass}>
         <Brands />
     </div>

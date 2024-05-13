@@ -14,12 +14,10 @@ const Footer = () => {
                 <a href="/#" className="mb-3 inline-block max-w-[90px]">
                   <img
                   src={logo}
-                    //src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo.svg"
                     alt="logo"
                     className="max-w-full "
                   />
                   <img
-                    //src="https://cdn.tailgrids.com/2.0/image/assets/images/logo/logo-white.svg"
                     src={logo2}
                     alt="logo"
                     className="max-w-full hidden dark:hidden"

@@ -1,4 +1,4 @@
-import React from "react"
+
 import luandaPhoto from '../assets/partnership.png'
 import woman from "../assets/woman1.png"
 import loadingContainer from "../assets/shipping11.png"

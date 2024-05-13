@@ -8,7 +8,6 @@ const Brands = () => {
         id='brands'
         className="bg-white py-20 dark:bg-dark lg:py-[120px]"
         >
-       
         <div className="container mx-auto">
           
           <div className="flex flex-wrap -mx-4">

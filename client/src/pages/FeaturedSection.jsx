@@ -1,8 +1,7 @@
-import React from 'react'
 import shippingImg from '../assets/shipping10.png'
 import shippingImg1 from '../assets/shipping12.png'
 
-export default function FeaturedSection() {
+const  FeaturedSection = () =>  {
   return (
     <div>
         <section className="bg-[#fff] dark:bg-lightest-navy">
@@ -20,12 +19,10 @@ export default function FeaturedSection() {
                     <img 
                         className="  rounded-lg" 
                         src={shippingImg}
-                        //src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png" 
                         alt="shipping, plane, track, ship" />
                     <img 
                         className="mt-4 w-full h-full lg:mt-10 rounded-lg"
-                        src={shippingImg1} 
-                        //src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png" 
+                        src={shippingImg1}  
                         alt="office content 2" />
                 </div>
             </div>
@@ -33,3 +30,5 @@ export default function FeaturedSection() {
     </div>
   )
 }
+
+export default FeaturedSection

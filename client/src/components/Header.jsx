@@ -34,10 +34,12 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0`}>
         <div 
-            className='flex items-center justify-between mx-auto w-5/6'
+            className='flex items-center justify-between mx-auto w-5/6 xs:w-full'
             //style={{ width: theme === 'dark' ? 'light-menu' : 'dark-menu'}}
         >
-            <a href="/">
+            <a
+                
+                 href="/">
                 {/* <img 
                     className='w-[20%] xs:w-[15%] sm:w-[13%]  md:w-[14%] lg:w-[10%] xl:w-[8%] 2xl:w-[6%]'
                     style={{ width: theme === 'dark' ? 'logo-dark' : 'logo-light', paddingBlock: '8px'}}
@@ -46,7 +48,7 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
                 /> */}
                 <img 
                 //className="w-[20%] xs:w-[15%] sm:w-[13%] py-2 md:w-[15%] lg:w-[10%] xl:w- 2xl:w-[6%]"
-                className="h-20"
+                className="h-20 mr[80px] "
                     src={logo2} 
                     alt="logo" 
                     
@@ -68,7 +70,7 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
                                 setSelectedPage={setSelectedPage}
                           />
                       </div>
-                      
+
                       <div className="text-navy">
                           <Link
                                 page="About"

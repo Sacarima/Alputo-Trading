@@ -179,6 +179,12 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'automation-zoom-in': 'automation-zoom-in 0.5s',
       },
+      backgroundImage: (theme) => ({
+        "gradient-rainbow": 
+          "linear-gradient(81.66deg, #00B5EE 7.21%, #FF454 45.05%, #FFBA00 78.07%)",
+        "gradient-rainblue":
+          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
+    }),
     },
   },
   plugins: [
