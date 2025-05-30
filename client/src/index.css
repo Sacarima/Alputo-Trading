@@ -124,7 +124,7 @@ body {
 }
 
 .effect-blur {
-  filter: blur(8px);
+  filter: blur(3px);
   transition: filter 0.3s ease;
 }
 

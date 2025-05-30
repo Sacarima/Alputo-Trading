@@ -13,7 +13,7 @@ export default {
       center: true,
       padding: '2rem',
       screens: {
-        xxxs:"330px",
+        xxxs:"420px",
         xxs:"400px",
         xs: "480px",
         xxsm: "576px",
@@ -22,7 +22,7 @@ export default {
         xmd: "900px",
         md: "1060px",
         lg: "1280px",
-        xl: "1440px",
+        xl: "1640px",
       },
     },
     extend: {

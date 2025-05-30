@@ -14,7 +14,7 @@ const Brands = () => {
           
             <div className="w-full px-4">
             
-              <div className="flex flex-wrap items-center justify-center">
+              <div className="flex flex-wrap gap-4 items-center justify-center">
               
                 <SingleImage
                   href="#"

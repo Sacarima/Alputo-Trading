@@ -25,7 +25,7 @@ const Link = ({ page, selectedPage, setSelectedPage }) => {
 
 export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
    const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
-   const navbarBackground = isTopOfPage ? "" : " dark:bg-lightest-navy bg-white transition text-light-nav duration-500 ease-in-out shadow-md"
+   const navbarBackground = isTopOfPage ? "" : " dark:bg-lightest-navy bg-[#ffff] transition text-light-nav duration-500 ease-in-out"
    const dispatch = useDispatch()
    const { theme } = useSelector(state => state.theme)
    const isMenuOpen = useSelector(state => state.ui.isMenuOpen)
@@ -34,7 +34,7 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
   return (
     <nav className={`${navbarBackground} z-40 w-full fixed top-0`}>
         <div 
-            className='flex items-center justify-between mx-auto w-5/6 xs:w-full'
+            className='flex items-center justify-between mx-auto xl:w-5/6 lg:w-5/6 xs:w-full '
             //style={{ width: theme === 'dark' ? 'light-menu' : 'dark-menu'}}
         >
             <a
@@ -116,7 +116,7 @@ export default function Header({isTopOfPage, selectedPage, setSelectedPage}) {
                             {theme === 'light' ? <FaSun /> : <FaMoon />}
                         </button>
                         <button
-                            className=" text-4xl text-primary dark:text-lightest-slate mb-2 overflow-hidden"
+                            className=" text-4xl text-primary dark:text-lightest-slate mb-2 overflow-hidden mr-4"
                             onClick={() => dispatch(toggleMenu())}
                         >
                            ☰

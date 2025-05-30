@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import windhoekPhoto from '../assets/windhoek-city.webp'
 import AnchorLink from "react-anchor-link-smooth-scroll"
-import { motion } from 'framer-motion'
+import { Link } from "react-router-dom"
 
-const Hero = () => {
+
+const Hero = ({page, selectedPage, setSelectedPage}) => {
   return (
     <>
       
       <div 
         id='home'
-        className="relative bg-[#fff] pb-[110px] pt-[120px] dark:bg-navy lg:pt-[150px]"
+        className="relative bg-[#fff] pb-[110px] pt-[120px] dark:bg-navy xxxs:w-full lg:pt-[150px] lg:w-5/6 xl:w-full lg:mx-auto"
         >
         <div className="container">
-          <div className="-mx-4 flex flex-wrap">
+          <div className="flex flex-wrap">
             <div className="w-full px-4 lg:w-5/12">
               <div className="hero-content">
                 <h1 className="mb-5 text-4xl font-bold !leading-[1.208] text-dark dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
@@ -27,7 +28,9 @@ a variety of comprehensive services
                   <li>
                     <AnchorLink>
                       <button
-                        href="/contact"
+                                                        page="Contact"
+                                                        selectedPage={selectedPage}
+                                                        setSelectedPage={setSelectedPage}
                         className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-dark lg:px-7"
                       >
                         Contact Us
