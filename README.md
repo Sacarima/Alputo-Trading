@@ -18,9 +18,8 @@ The platform highlights the company’s mission, services, and values, while pro
 
 ---
 
-##  Preview
-
-> Add a screenshot here of your homepage / hero section for visual impact.
+## 🖼️ Preview
+![Alputo Trading Screenshot](./alputo.png)
 
 ---
 
@@ -39,5 +38,5 @@ Follow these steps to run the project locally:
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/yourusername/alputo-trading.git
+git clone https://github.com/Sacarima/Alputo-Trading](https://github.com/Sacarima/Alputo-Trading
 cd alputo-trading
