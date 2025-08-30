@@ -38,5 +38,5 @@ Follow these steps to run the project locally:
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/Sacarima/Alputo-Trading](https://github.com/Sacarima/Alputo-Trading
+git clone https://github.com/Sacarima/Alputo-Trading
 cd alputo-trading
